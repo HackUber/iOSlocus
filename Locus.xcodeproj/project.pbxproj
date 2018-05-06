@@ -16,6 +16,11 @@
 		93232E4B209E94D80011512E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93232E49209E94D80011512E /* LaunchScreen.storyboard */; };
 		93232E53209EB4940011512E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93232E52209EB4940011512E /* LoginViewController.swift */; };
 		93232E55209EB63B0011512E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93232E54209EB63B0011512E /* Request.swift */; };
+		93232E5A209EC58E0011512E /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93232E59209EC58E0011512E /* GroupViewController.swift */; };
+		93232E5C209EC5B70011512E /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93232E5B209EC5B70011512E /* GroupTableViewCell.swift */; };
+		93232E5E209ED6D70011512E /* UserCalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93232E5D209ED6D70011512E /* UserCalendarCollectionViewCell.swift */; };
+		93232E60209ED75A0011512E /* UserCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93232E5F209ED75A0011512E /* UserCalendarViewController.swift */; };
+		93232E62209ED8340011512E /* UserInToggleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93232E61209ED8340011512E /* UserInToggleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		93232E4C209E94D80011512E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93232E52209EB4940011512E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		93232E54209EB63B0011512E /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		93232E59209EC58E0011512E /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupViewController.swift; path = ../../../Documents/GroupViewController.swift; sourceTree = "<group>"; };
+		93232E5B209EC5B70011512E /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		93232E5D209ED6D70011512E /* UserCalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		93232E5F209ED75A0011512E /* UserCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCalendarViewController.swift; sourceTree = "<group>"; };
+		93232E61209ED8340011512E /* UserInToggleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInToggleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,8 @@
 			children = (
 				93232E52209EB4940011512E /* LoginViewController.swift */,
 				93232E42209E94D80011512E /* ViewController.swift */,
+				93232E59209EC58E0011512E /* GroupViewController.swift */,
+				93232E5F209ED75A0011512E /* UserCalendarViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -88,6 +100,9 @@
 			children = (
 				93232E49209E94D80011512E /* LaunchScreen.storyboard */,
 				93232E44209E94D80011512E /* Main.storyboard */,
+				93232E5B209EC5B70011512E /* GroupTableViewCell.swift */,
+				93232E5D209ED6D70011512E /* UserCalendarCollectionViewCell.swift */,
+				93232E61209ED8340011512E /* UserInToggleTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,11 +188,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93232E5C209EC5B70011512E /* GroupTableViewCell.swift in Sources */,
+				93232E5A209EC58E0011512E /* GroupViewController.swift in Sources */,
 				93232E53209EB4940011512E /* LoginViewController.swift in Sources */,
 				93232E55209EB63B0011512E /* Request.swift in Sources */,
 				679E0315209EAC3F00B30F2D /* RegisterViewController.swift in Sources */,
 				93232E43209E94D80011512E /* ViewController.swift in Sources */,
+				93232E60209ED75A0011512E /* UserCalendarViewController.swift in Sources */,
 				93232E41209E94D80011512E /* AppDelegate.swift in Sources */,
+				93232E5E209ED6D70011512E /* UserCalendarCollectionViewCell.swift in Sources */,
+				93232E62209ED8340011512E /* UserInToggleTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +335,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 57RJBLV3QQ;
+				DEVELOPMENT_TEAM = 7K58N8K4L5;
 				INFOPLIST_FILE = Locus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Locus.Locus;
@@ -330,7 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 57RJBLV3QQ;
+				DEVELOPMENT_TEAM = 7K58N8K4L5;
 				INFOPLIST_FILE = Locus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Locus.Locus;
