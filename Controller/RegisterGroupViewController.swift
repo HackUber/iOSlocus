@@ -1,5 +1,5 @@
 //
-//  RegisterViewController.swift
+//  RegisterGroupViewController.swift
 //  Locus
 //
 //  Created by Marcelo Cristiano Araujo Silva on 06/05/2018.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterGroupViewController: UIViewController {
+
+    
     @IBOutlet weak var name: UITextField!
     
-    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var fullAddres: UITextField!
     
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var destination: UITextField!
     
-    @IBOutlet weak var confirmPassword: UITextField!
-    
-    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var hour: UIDatePicker!
     
     
     override func viewDidLoad() {
@@ -31,7 +31,8 @@ class RegisterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func RegisterUser(_ sender: Any) {
+
+    @IBAction func register(_ sender: Any) {
         let sharedSession = URLSession.shared
         
         if let url = URL(string: "http://localhost:3000/groups/") {
@@ -39,13 +40,13 @@ class RegisterViewController: UIViewController {
             var request = URLRequest(url: url)
             
             var json = [String:Any]()
-
+            
             json = [
-                "name": "Trabalho",
-                "origin": "12.8686",
-                "destination": "12.341215",
-                "arrival_time": "2018-05-06 01:03:39 -0300",
-                "departure_time": "2018-05-06 01:03:39 -0300"
+                "name": self.name.text!,
+                "origin": self.fullAddres.text!,
+                "destination": self.destination.text!,
+                "arrival_time": self.hour.date.toString(dateFormat: "HH:mm:ss"),
+                "departure_time": self.hour.date.toString(dateFormat: "HH:mm:ss")
             ]
             
             let data = try! JSONSerialization.data(withJSONObject: json, options: [])
@@ -67,7 +68,6 @@ class RegisterViewController: UIViewController {
         
         navigationController?.popViewController(animated: true)
     }
-    
     /*
     // MARK: - Navigation
 
@@ -78,4 +78,15 @@ class RegisterViewController: UIViewController {
     }
     */
 
+}
+
+extension Date
+{
+    func toString( dateFormat format  : String ) -> String
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
+    }
+    
 }

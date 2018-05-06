@@ -12,6 +12,8 @@ class UserCalendarViewController: UIViewController, UITableViewDataSource, UITab
     
     
     let daysOfWeek = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta"]
+    let personImage = [#imageLiteral(resourceName: "person"), #imageLiteral(resourceName: "person-2"), #imageLiteral(resourceName: "person-3"), #imageLiteral(resourceName: "person-4"), #imageLiteral(resourceName: "person-5")]
+    let personName = ["Joana Almeida", "Pedro Carlos", "Carla Silva", "Dandara Miranda", "Fernanda Lima"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +27,7 @@ class UserCalendarViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userInToggle", for: indexPath) as! UserInToggleTableViewCell
-        cell.frinedName.text = "Joana"
+        cell.frinedName.text = personName[indexPath.row]
         return cell
     
     }
@@ -38,7 +40,7 @@ class UserCalendarViewController: UIViewController, UITableViewDataSource, UITab
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "userCollection", for: indexPath) as! UserCalendarCollectionViewCell
-        cell.friendImage.image = #imageLiteral(resourceName: "person")
+        cell.friendImage.image = personImage[indexPath.row]
         cell.dayOfWeek.text = daysOfWeek[indexPath.row]
         return cell
     }

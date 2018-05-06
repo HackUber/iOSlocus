@@ -10,6 +10,7 @@
 		679E0313209EA79900B30F2D /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 679E0312209EA79900B30F2D /* Register.storyboard */; };
 		679E0315209EAC3F00B30F2D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679E0314209EAC3F00B30F2D /* RegisterViewController.swift */; };
 		679E0317209EE67500B30F2D /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679E0316209EE67400B30F2D /* GroupViewController.swift */; };
+		679E031B209EF42500B30F2D /* RegisterGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679E031A209EF42500B30F2D /* RegisterGroupViewController.swift */; };
 		93232E41209E94D80011512E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93232E40209E94D80011512E /* AppDelegate.swift */; };
 		93232E43209E94D80011512E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93232E42209E94D80011512E /* ViewController.swift */; };
 		93232E46209E94D80011512E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93232E44209E94D80011512E /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		679E0312209EA79900B30F2D /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		679E0314209EAC3F00B30F2D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		679E0316209EE67400B30F2D /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		679E031A209EF42500B30F2D /* RegisterGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGroupViewController.swift; sourceTree = "<group>"; };
 		93232E3D209E94D80011512E /* Locus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93232E40209E94D80011512E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93232E42209E94D80011512E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				93232E42209E94D80011512E /* ViewController.swift */,
 				679E0316209EE67400B30F2D /* GroupViewController.swift */,
 				93232E5F209ED75A0011512E /* UserCalendarViewController.swift */,
+				679E031A209EF42500B30F2D /* RegisterGroupViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				93232E43209E94D80011512E /* ViewController.swift in Sources */,
 				93232E60209ED75A0011512E /* UserCalendarViewController.swift in Sources */,
 				93232E41209E94D80011512E /* AppDelegate.swift in Sources */,
+				679E031B209EF42500B30F2D /* RegisterGroupViewController.swift in Sources */,
 				93232E5E209ED6D70011512E /* UserCalendarCollectionViewCell.swift in Sources */,
 				93232E62209ED8340011512E /* UserInToggleTableViewCell.swift in Sources */,
 			);
