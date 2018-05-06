@@ -42,7 +42,18 @@ class UserCalendarViewController: UIViewController, UITableViewDataSource, UITab
         let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "userCollection", for: indexPath) as! UserCalendarCollectionViewCell
         cell.friendImage.image = personImage[indexPath.row]
         cell.dayOfWeek.text = daysOfWeek[indexPath.row]
+        cell.friendImage.roundEdgesPhoto()
         return cell
     }
 
+}
+
+
+extension UIView {
+    func roundEdgesPhoto() {
+        self.layer.borderWidth = 1.0
+        self.layer.masksToBounds = true
+        self.layer.borderColor = UIColor.clear.cgColor
+        self.layer.cornerRadius = 40
+    }
 }
