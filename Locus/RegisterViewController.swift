@@ -38,23 +38,23 @@ class RegisterViewController: UIViewController {
             // Create Request
             var request = URLRequest(url: url)
             
-            var json = [String:Any]()
-
-            json = [
-                "name": "Trabalho",
-                "origin": "12.8686",
-                "destination": "12.341215",
-                "arrival_time": "2018-05-06 01:03:39 -0300",
-                "departure_time": "2018-05-06 01:03:39 -0300"
-            ]
-            
-            let data = try! JSONSerialization.data(withJSONObject: json, options: [])
-            
-            request.httpMethod = "POST"
-            request.httpBody = data
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.addValue("application/json", forHTTPHeaderField: "Accept")
-            
+//            var json = [String:Any]()
+//
+//            json = [
+//                "name": "Trabalho",
+//                "origin": "12.8686",
+//                "destination": "12.341215",
+//                "arrival_time": "2018-05-06 01:03:39 -0300",
+//                "departure_time": "2018-05-06 01:03:39 -0300"
+//            ]
+//
+//            let data = try! JSONSerialization.data(withJSONObject: json, options: [])
+//
+//            request.httpMethod = "POST"
+//            request.httpBody = data
+//            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+//            request.addValue("application/json", forHTTPHeaderField: "Accept")
+//
             // Create Data Task
             let dataTask = sharedSession.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
                 if let data = data {
@@ -65,9 +65,12 @@ class RegisterViewController: UIViewController {
             dataTask.resume()
         }
         
-        navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func cancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
