@@ -10,8 +10,8 @@ import UIKit
 
 class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let images = [#imageLiteral(resourceName: "car"), #imageLiteral(resourceName: "car-2"), #imageLiteral(resourceName: "car-3"), #imageLiteral(resourceName: "car-4")]
-    let text = ["Trabalho Planaltina", "Crianças colégio"]
+    let images = [#imageLiteral(resourceName: "job"),#imageLiteral(resourceName: "menina"),#imageLiteral(resourceName: "church"),#imageLiteral(resourceName: "grill"),#imageLiteral(resourceName: "football-field")]
+    let text = ["Trabalho em Planaltina",  "Rodízio de pais", "Igreja no sádado", "Churrasco no domingo, Fut com a galera"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "groups", for: indexPath) as! GroupTableViewCell
         
-        cell.imageGroup.image = images[indexPath.row % 3]
+        cell.imageGroup.image = images[indexPath.row]
         cell.nameGroup.text = text[indexPath.row]
         
         

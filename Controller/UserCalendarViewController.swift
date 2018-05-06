@@ -13,7 +13,7 @@ class UserCalendarViewController: UIViewController, UITableViewDataSource, UITab
     
     let daysOfWeek = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta"]
     let personImage = [#imageLiteral(resourceName: "person"), #imageLiteral(resourceName: "person-2"), #imageLiteral(resourceName: "person-3"), #imageLiteral(resourceName: "person-4"), #imageLiteral(resourceName: "person-5")]
-    let personName = ["Joana Almeida", "Pedro Carlos", "Carla Silva", "Dandara Miranda", "Fernanda Lima"]
+    var personName = ["Joana Almeida", "Pedro Carlos", "Carla Silva", "Dandara Miranda", "Fernanda Lima"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class UserCalendarViewController: UIViewController, UITableViewDataSource, UITab
     
     //table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.personName.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -30,6 +30,16 @@ class UserCalendarViewController: UIViewController, UITableViewDataSource, UITab
         cell.frinedName.text = personName[indexPath.row]
         return cell
     
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            self.personName.remove(at: indexPath.row)
+        }
     }
     
     //collection
