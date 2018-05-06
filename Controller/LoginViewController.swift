@@ -10,22 +10,43 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var entreyButton: UIButton!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.entreyButton.roundEdges()
+        self.passwordTextField.roundEdges()
+        self.loginTextField.roundEdges()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     @IBAction func registerUser(_ sender: Any) {
     }
     
+}
+
+extension UIViewController {
+    func removeNavBarLine(){
+        let navigationBar = navigationController?.navigationBar
+        navigationBar?.isTranslucent = false
+        navigationBar?.setBackgroundImage(UIImage(), for: .default)
+        navigationBar?.shadowImage = UIImage()
+    }
+ func setNavigationBarColor (color: UIColor) {
+     self.removeNavBarLine()
+     navigationController?.navigationBar.barTintColor = color
+    }
+}
+
+extension UIView {
+    func roundEdges() {
+        self.layer.borderWidth = 1.0
+        self.layer.masksToBounds = true
+        self.layer.borderColor = UIColor.clear.cgColor
+        self.layer.cornerRadius = 20
+    }
 }

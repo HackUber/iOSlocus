@@ -11,6 +11,7 @@ import UIKit
 class RegisterGroupViewController: UIViewController {
 
     
+    @IBOutlet weak var registerGroupButton: UIButton!
     @IBOutlet weak var name: UITextField!
     
     @IBOutlet weak var fullAddres: UITextField!
@@ -22,8 +23,7 @@ class RegisterGroupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.registerGroupButton.roundEdges()
     }
 
     override func didReceiveMemoryWarning() {
