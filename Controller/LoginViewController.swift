@@ -25,9 +25,6 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func makeLogin(_ sender: Any) {
-    }
-    
     @IBAction func registerUser(_ sender: Any) {
     }
     
