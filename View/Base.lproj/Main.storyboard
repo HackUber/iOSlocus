@@ -26,7 +26,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="action-adventure-blur-386009" translatesAutoresizingMaskIntoConstraints="NO" id="7wG-9d-PBN">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v7P-3q-Bpa">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v7P-3q-Bpa">
                                 <rect key="frame" x="16" y="278" width="343" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="0.70615096830985913" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -99,7 +99,6 @@
                             <constraint firstItem="iKN-AZ-LGm" firstAttribute="centerX" secondItem="v7P-3q-Bpa" secondAttribute="centerX" id="ESS-30-8dz"/>
                             <constraint firstItem="TaZ-Aa-QpS" firstAttribute="leading" secondItem="Aij-kp-PCo" secondAttribute="leading" constant="-14" id="FTY-vS-kON"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2XM-av-cqK" secondAttribute="trailing" constant="16" id="KrU-np-teL"/>
-                            <constraint firstItem="v7P-3q-Bpa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="P09-iO-yxU"/>
                             <constraint firstItem="iKN-AZ-LGm" firstAttribute="leading" secondItem="7wG-9d-PBN" secondAttribute="leading" id="TtC-fg-bLb"/>
                             <constraint firstItem="Aij-kp-PCo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="Vcv-oR-7Bd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v7P-3q-Bpa" secondAttribute="trailing" constant="16" id="Zn7-Hj-J3L"/>
@@ -108,6 +107,8 @@
                             <constraint firstItem="7wG-9d-PBN" firstAttribute="bottom" secondItem="j0g-LC-UKD" secondAttribute="bottom" id="fuU-oh-FCY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aij-kp-PCo" secondAttribute="trailing" constant="126" id="g9Z-BF-3Bv"/>
                             <constraint firstItem="7wG-9d-PBN" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gqa-Jw-OVa"/>
+                            <constraint firstItem="j0g-LC-UKD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="grg-cc-sWf"/>
+                            <constraint firstItem="j0g-LC-UKD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hIw-gh-JXT"/>
                             <constraint firstItem="j0g-LC-UKD" firstAttribute="top" secondItem="iKN-AZ-LGm" secondAttribute="bottom" constant="95" id="i8t-xB-P6L"/>
                             <constraint firstItem="TaZ-Aa-QpS" firstAttribute="top" secondItem="v7P-3q-Bpa" secondAttribute="bottom" constant="86" id="rHy-pe-ZkO"/>
                             <constraint firstItem="iKN-AZ-LGm" firstAttribute="top" secondItem="TaZ-Aa-QpS" secondAttribute="bottom" constant="40" id="xsy-l2-WNz"/>
@@ -156,7 +157,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Planaltina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3A9-Ma-DhV">
                                                     <rect key="frame" x="97" y="30" width="278" height="42"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="30"/>
+                                                    <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -239,11 +240,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome da pessoa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTJ-0h-0g0">
-                                                    <rect key="frame" x="24" y="12" width="327" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="24" y="5" width="327" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="23"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="-10" height="-1"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -317,11 +319,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7kc-5H-eQi">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="28"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Pessoas"/>
+                                    <segment title="Grupos"/>
                                 </segments>
                                 <color key="tintColor" red="0.0" green="0.60524308680000005" blue="0.78460901979999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>

@@ -11,7 +11,7 @@ import UIKit
 class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let images = [#imageLiteral(resourceName: "job"),#imageLiteral(resourceName: "menina"),#imageLiteral(resourceName: "church"),#imageLiteral(resourceName: "grill"),#imageLiteral(resourceName: "football-field")]
-    let text = ["Trabalho em Planaltina",  "Rodízio de pais", "Igreja no sádado", "Churrasco no domingo, Fut com a galera"]
+    let text = ["Trabalho em Planaltina",  "Rodízio de pais", "Igreja no sádado", "Churrasco no domingo", "Fut com a galera"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
