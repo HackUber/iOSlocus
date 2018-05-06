@@ -11,6 +11,8 @@
 		679E0315209EAC3F00B30F2D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679E0314209EAC3F00B30F2D /* RegisterViewController.swift */; };
 		679E0317209EE67500B30F2D /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679E0316209EE67400B30F2D /* GroupViewController.swift */; };
 		679E031B209EF42500B30F2D /* RegisterGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679E031A209EF42500B30F2D /* RegisterGroupViewController.swift */; };
+		679E031D209F48D300B30F2D /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679E031C209F48D300B30F2D /* UserListViewController.swift */; };
+		679E031F209F4A5300B30F2D /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679E031E209F4A5300B30F2D /* UserListTableViewCell.swift */; };
 		93232E41209E94D80011512E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93232E40209E94D80011512E /* AppDelegate.swift */; };
 		93232E43209E94D80011512E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93232E42209E94D80011512E /* ViewController.swift */; };
 		93232E46209E94D80011512E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93232E44209E94D80011512E /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 		679E0314209EAC3F00B30F2D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		679E0316209EE67400B30F2D /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		679E031A209EF42500B30F2D /* RegisterGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGroupViewController.swift; sourceTree = "<group>"; };
+		679E031C209F48D300B30F2D /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		679E031E209F4A5300B30F2D /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 		93232E3D209E94D80011512E /* Locus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93232E40209E94D80011512E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93232E42209E94D80011512E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +109,9 @@
 				93232E44209E94D80011512E /* Main.storyboard */,
 				93232E5B209EC5B70011512E /* GroupTableViewCell.swift */,
 				93232E5D209ED6D70011512E /* UserCalendarCollectionViewCell.swift */,
+				679E031E209F4A5300B30F2D /* UserListTableViewCell.swift */,
 				93232E61209ED8340011512E /* UserInToggleTableViewCell.swift */,
+				679E031C209F48D300B30F2D /* UserListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,8 +200,10 @@
 				93232E5C209EC5B70011512E /* GroupTableViewCell.swift in Sources */,
 				93232E53209EB4940011512E /* LoginViewController.swift in Sources */,
 				679E0317209EE67500B30F2D /* GroupViewController.swift in Sources */,
+				679E031F209F4A5300B30F2D /* UserListTableViewCell.swift in Sources */,
 				93232E55209EB63B0011512E /* Request.swift in Sources */,
 				679E0315209EAC3F00B30F2D /* RegisterViewController.swift in Sources */,
+				679E031D209F48D300B30F2D /* UserListViewController.swift in Sources */,
 				93232E43209E94D80011512E /* ViewController.swift in Sources */,
 				93232E60209ED75A0011512E /* UserCalendarViewController.swift in Sources */,
 				93232E41209E94D80011512E /* AppDelegate.swift in Sources */,

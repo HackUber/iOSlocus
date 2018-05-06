@@ -11,7 +11,7 @@ import UIKit
 class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 
-    let images = [#imageLiteral(resourceName: "car"), #imageLiteral(resourceName: "car-2"), #imageLiteral(resourceName: "car-3"), #imageLiteral(resourceName: "car-4")]
+    let images = [#imageLiteral(resourceName: "job"), #imageLiteral(resourceName: "grill"), #imageLiteral(resourceName: "football-field"),#imageLiteral(resourceName: "doctor"), #imageLiteral(resourceName: "church"), #imageLiteral(resourceName: "menina")]
     var text = NSArray()
     
     @IBOutlet weak var myTableView: UITableView!
@@ -56,7 +56,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "groups", for: indexPath) as! GroupTableViewCell
         
-        cell.imageGroup.image = images[indexPath.row % 3]
+        cell.imageGroup.image = images[indexPath.row]
         cell.nameGroup.text = (text[indexPath.row] as AnyObject)["name"] as? String
         
         return cell
