@@ -25,10 +25,12 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if let url = URL(string: "http://localhost:3000/groups/") {
             // Create Request
-            let request = URLRequest(url: url)
+            var request = URLRequest(url: url)
+            request.addValue("Token 1", forHTTPHeaderField: "Authorized")
 
             let dataTask = sharedSession.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
                 if error == nil, let data = (try? JSONSerialization.jsonObject(with: data!, options: [])) {
+                    print(data)
                     self.text = data as! NSArray
 //                    print(self.text)
                     
