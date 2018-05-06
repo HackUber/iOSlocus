@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		679E0313209EA79900B30F2D /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 679E0312209EA79900B30F2D /* Register.storyboard */; };
 		679E0315209EAC3F00B30F2D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679E0314209EAC3F00B30F2D /* RegisterViewController.swift */; };
+		679E0317209EE67500B30F2D /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679E0316209EE67400B30F2D /* GroupViewController.swift */; };
 		93232E41209E94D80011512E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93232E40209E94D80011512E /* AppDelegate.swift */; };
 		93232E43209E94D80011512E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93232E42209E94D80011512E /* ViewController.swift */; };
 		93232E46209E94D80011512E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93232E44209E94D80011512E /* Main.storyboard */; };
@@ -16,7 +17,6 @@
 		93232E4B209E94D80011512E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93232E49209E94D80011512E /* LaunchScreen.storyboard */; };
 		93232E53209EB4940011512E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93232E52209EB4940011512E /* LoginViewController.swift */; };
 		93232E55209EB63B0011512E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93232E54209EB63B0011512E /* Request.swift */; };
-		93232E5A209EC58E0011512E /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93232E59209EC58E0011512E /* GroupViewController.swift */; };
 		93232E5C209EC5B70011512E /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93232E5B209EC5B70011512E /* GroupTableViewCell.swift */; };
 		93232E5E209ED6D70011512E /* UserCalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93232E5D209ED6D70011512E /* UserCalendarCollectionViewCell.swift */; };
 		93232E60209ED75A0011512E /* UserCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93232E5F209ED75A0011512E /* UserCalendarViewController.swift */; };
@@ -26,6 +26,7 @@
 /* Begin PBXFileReference section */
 		679E0312209EA79900B30F2D /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		679E0314209EAC3F00B30F2D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		679E0316209EE67400B30F2D /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		93232E3D209E94D80011512E /* Locus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93232E40209E94D80011512E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93232E42209E94D80011512E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +36,6 @@
 		93232E4C209E94D80011512E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93232E52209EB4940011512E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		93232E54209EB63B0011512E /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		93232E59209EC58E0011512E /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupViewController.swift; path = ../../../Documents/GroupViewController.swift; sourceTree = "<group>"; };
 		93232E5B209EC5B70011512E /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		93232E5D209ED6D70011512E /* UserCalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		93232E5F209ED75A0011512E /* UserCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCalendarViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 			children = (
 				93232E52209EB4940011512E /* LoginViewController.swift */,
 				93232E42209E94D80011512E /* ViewController.swift */,
-				93232E59209EC58E0011512E /* GroupViewController.swift */,
+				679E0316209EE67400B30F2D /* GroupViewController.swift */,
 				93232E5F209ED75A0011512E /* UserCalendarViewController.swift */,
 			);
 			path = Controller;
@@ -142,7 +142,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Locus;
 				TargetAttributes = {
 					93232E3C209E94D80011512E = {
@@ -189,8 +189,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				93232E5C209EC5B70011512E /* GroupTableViewCell.swift in Sources */,
-				93232E5A209EC58E0011512E /* GroupViewController.swift in Sources */,
 				93232E53209EB4940011512E /* LoginViewController.swift in Sources */,
+				679E0317209EE67500B30F2D /* GroupViewController.swift in Sources */,
 				93232E55209EB63B0011512E /* Request.swift in Sources */,
 				679E0315209EAC3F00B30F2D /* RegisterViewController.swift in Sources */,
 				93232E43209E94D80011512E /* ViewController.swift in Sources */,
@@ -237,6 +237,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -244,6 +245,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -294,6 +296,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -301,6 +304,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
