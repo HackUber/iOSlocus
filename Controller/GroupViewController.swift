@@ -10,11 +10,39 @@ import UIKit
 
 class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let images = [#imageLiteral(resourceName: "job"),#imageLiteral(resourceName: "menina"),#imageLiteral(resourceName: "church"),#imageLiteral(resourceName: "grill"),#imageLiteral(resourceName: "football-field")]
-    let text = ["Trabalho em Planaltina",  "Rodízio de pais", "Igreja no sádado", "Churrasco no domingo", "Fut com a galera"]
+
+    let images = [#imageLiteral(resourceName: "car"), #imageLiteral(resourceName: "car-2"), #imageLiteral(resourceName: "car-3"), #imageLiteral(resourceName: "car-4")]
+    var text = NSArray()
+    
+    @IBOutlet weak var myTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let sharedSession = URLSession.shared
+        
+        if let url = URL(string: "http://localhost:3000/groups/") {
+            // Create Request
+            var request = URLRequest(url: url)
+            request.addValue("Token 1", forHTTPHeaderField: "Authorized")
+
+            let dataTask = sharedSession.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+                if error == nil, let data = (try? JSONSerialization.jsonObject(with: data!, options: [])) {
+                    print(data)
+                    self.text = data as! NSArray
+//                    print(self.text)
+                    
+                    OperationQueue.main.addOperation {
+                        self.myTableView.reloadData()
+                    }
+                }
+            })
+            
+            dataTask.resume()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,9 +56,8 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "groups", for: indexPath) as! GroupTableViewCell
         
-        cell.imageGroup.image = images[indexPath.row]
-        cell.nameGroup.text = text[indexPath.row]
-        
+        cell.imageGroup.image = images[indexPath.row % 3]
+        cell.nameGroup.text = (text[indexPath.row] as AnyObject)["name"] as? String
         
         return cell
     }

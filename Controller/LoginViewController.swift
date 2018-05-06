@@ -23,10 +23,6 @@ class LoginViewController: UIViewController {
         self.passwordTextField.roundEdges()
         self.loginTextField.roundEdges()
     }
-
-    @IBAction func registerUser(_ sender: Any) {
-    }
-    
 }
 
 extension UIViewController {

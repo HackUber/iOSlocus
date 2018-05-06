@@ -15,6 +15,8 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var password: UITextField!
     
+    @IBOutlet weak var phone: UITextField!
+    
     @IBOutlet weak var confirmPassword: UITextField!
     
     @IBOutlet weak var userImage: UIImageView!
@@ -34,27 +36,26 @@ class RegisterViewController: UIViewController {
     @IBAction func RegisterUser(_ sender: Any) {
         let sharedSession = URLSession.shared
         
-        if let url = URL(string: "http://localhost:3000/groups/") {
+        if let url = URL(string: "http://localhost:3000/users/") {
             // Create Request
             var request = URLRequest(url: url)
             
             var json = [String:Any]()
 
             json = [
-                "name": "Trabalho",
-                "origin": "12.8686",
-                "destination": "12.341215",
-                "arrival_time": "2018-05-06 01:03:39 -0300",
-                "departure_time": "2018-05-06 01:03:39 -0300"
+                "email": self.email.text!,
+                "phone_number": self.phone.text!,
+                "password": self.password.text!
             ]
-            
+
             let data = try! JSONSerialization.data(withJSONObject: json, options: [])
-            
+
             request.httpMethod = "POST"
             request.httpBody = data
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.addValue("application/json", forHTTPHeaderField: "Accept")
-            
+//            request.addValue("Token " + id, forHTTPHeaderField: "Authorized")
+
             // Create Data Task
             let dataTask = sharedSession.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
                 if let data = data {
@@ -65,9 +66,12 @@ class RegisterViewController: UIViewController {
             dataTask.resume()
         }
         
-        navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func cancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
